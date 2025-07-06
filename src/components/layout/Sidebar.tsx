@@ -9,7 +9,12 @@ import {
   Home,
   TrendingUp,
   Shield,
-  Sparkles
+  Sparkles,
+  DollarSign,
+  Calendar,
+  Zap,
+  Mail,
+  CheckCircle
 } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 
@@ -24,6 +29,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
   const investorNavigation = [
     { id: 'dashboard', label: 'Dashboard', icon: Home },
     { id: 'portfolio', label: 'Portfolio', icon: PieChart },
+    { id: 'capital-account', label: 'Capital Account', icon: DollarSign },
+    { id: 'tax-documents', label: 'Tax Documents', icon: Calendar },
     { id: 'documents', label: 'Documents', icon: FileText },
     { id: 'messages', label: 'Messages', icon: MessageSquare },
     { id: 'ai-features', label: 'AI Features', icon: Sparkles },
@@ -35,6 +42,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
     { id: 'portfolio', label: 'Portfolio', icon: PieChart },
     { id: 'investors', label: 'Investors', icon: Users },
     { id: 'analytics', label: 'Analytics', icon: BarChart3 },
+    { id: 'compliance', label: 'Compliance', icon: CheckCircle },
+    { id: 'workflow', label: 'Automation', icon: Zap },
+    { id: 'communication', label: 'Communications', icon: Mail },
     { id: 'documents', label: 'Documents', icon: FileText },
     { id: 'messages', label: 'Messages', icon: MessageSquare },
     { id: 'ai-features', label: 'AI Features', icon: Sparkles },

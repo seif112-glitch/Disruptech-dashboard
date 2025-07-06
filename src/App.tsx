@@ -22,7 +22,12 @@ import { MessagesView } from './components/messages/MessagesView';
 import { SettingsView } from './components/settings/SettingsView';
 import { InvestorsView } from './components/admin/InvestorsView';
 import { AnalyticsView } from './components/admin/AnalyticsView';
+import { ComplianceView } from './components/admin/ComplianceView';
+import { WorkflowAutomation } from './components/admin/WorkflowAutomation';
+import { BulkCommunication } from './components/admin/BulkCommunication';
 import { AIFeaturesView } from './components/ai/AIFeaturesView';
+import { CapitalAccount } from './components/investor/CapitalAccount';
+import { TaxDocuments } from './components/investor/TaxDocuments';
 import { useAuth } from './hooks/useAuth';
 
 function App() {
@@ -68,6 +73,10 @@ function App() {
         return <InvestorDashboard />;
       case 'portfolio':
         return <PortfolioView />;
+      case 'capital-account':
+        return <CapitalAccount />;
+      case 'tax-documents':
+        return <TaxDocuments />;
       case 'documents':
         return <DocumentsView />;
       case 'messages':
@@ -78,6 +87,12 @@ function App() {
         return user?.role === 'admin' ? <InvestorsView /> : <InvestorDashboard />;
       case 'analytics':
         return user?.role === 'admin' ? <AnalyticsView /> : <InvestorDashboard />;
+      case 'compliance':
+        return user?.role === 'admin' ? <ComplianceView /> : <InvestorDashboard />;
+      case 'workflow':
+        return user?.role === 'admin' ? <WorkflowAutomation /> : <InvestorDashboard />;
+      case 'communication':
+        return user?.role === 'admin' ? <BulkCommunication /> : <InvestorDashboard />;
       case 'ai-features':
         return <AIFeaturesView />;
       default:
