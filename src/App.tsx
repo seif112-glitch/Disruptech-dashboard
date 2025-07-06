@@ -3,12 +3,15 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { FundOverview } from './components/FundOverview';
 import { AIInsights } from './components/AIInsights';
+import { AIPreview } from './components/AIPreview';
+import { AIMarketInsights } from './components/AIMarketInsights';
 import { SmartSearch } from './components/SmartSearch';
 import { Team } from './components/Team';
 import { Portfolio } from './components/Portfolio';
+import { SecurityCompliance } from './components/SecurityCompliance';
 import { ContactForm } from './components/ContactForm';
 import { Footer } from './components/Footer';
-import { AIAssistant } from './components/AIAssistant';
+import { EnhancedAIAssistant } from './components/EnhancedAIAssistant';
 import { LoginForm } from './components/auth/LoginForm';
 import { Header as DashboardHeader } from './components/layout/Header';
 import { Sidebar } from './components/layout/Sidebar';
@@ -43,13 +46,16 @@ function App() {
             <Hero />
             <FundOverview />
             <AIInsights />
+            <AIPreview />
+            <AIMarketInsights />
             <SmartSearch />
             <Team />
             <Portfolio />
+            <SecurityCompliance />
             <ContactForm />
           </main>
           <Footer />
-          <AIAssistant />
+          <EnhancedAIAssistant />
         </div>
         <LoginForm />
       </>
