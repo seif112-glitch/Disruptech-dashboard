@@ -44,10 +44,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
   const navigation = user?.role === 'admin' ? adminNavigation : investorNavigation;
 
   return (
-    <div className="w-64 bg-slate-900 text-white flex flex-col h-screen fixed left-0 top-0 z-30">
+    <div className="w-64 bg-slate-800 text-white flex flex-col h-screen fixed left-0 top-0 z-30">
       <div className="p-6 border-b border-slate-700">
         <div className="flex items-center space-x-3">
-          <div className="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center">
+          <div className="h-8 w-8 bg-gradient-to-r from-teal-600 to-teal-500 rounded-lg flex items-center justify-center">
             <Shield className="h-5 w-5 text-white" />
           </div>
           <div>
@@ -69,16 +69,16 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                 className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 relative ${
                   activeTab === item.id
                     ? isAIFeature 
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
-                      : 'bg-blue-600 text-white shadow-lg'
-                    : 'text-slate-300 hover:bg-slate-800 hover:text-white'
+                      ? 'bg-gradient-to-r from-teal-600 to-teal-500 text-white shadow-lg'
+                      : 'bg-teal-600 text-white shadow-lg'
+                    : 'text-slate-300 hover:bg-slate-700 hover:text-white'
                 }`}
               >
                 <Icon className="h-5 w-5" />
                 <span className="font-medium">{item.label}</span>
                 {isAIFeature && (
                   <div className="absolute -top-1 -right-1">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse"></div>
                   </div>
                 )}
               </button>
@@ -89,7 +89,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
 
       <div className="p-4 border-t border-slate-700">
         <div className="flex items-center space-x-3">
-          <div className="h-10 w-10 bg-green-600 rounded-lg flex items-center justify-center">
+          <div className="h-10 w-10 bg-gradient-to-r from-teal-600 to-teal-500 rounded-lg flex items-center justify-center">
             <TrendingUp className="h-5 w-5 text-white" />
           </div>
           <div>

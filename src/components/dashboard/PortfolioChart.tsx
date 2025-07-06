@@ -24,8 +24,8 @@ export const PortfolioChart: React.FC = () => {
       <svg className="w-full h-full">
         <defs>
           <linearGradient id="portfolioGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.3" />
-            <stop offset="100%" stopColor="#3B82F6" stopOpacity="0" />
+            <stop offset="0%" stopColor="#0D9488" stopOpacity="0.3" />
+            <stop offset="100%" stopColor="#0D9488" stopOpacity="0" />
           </linearGradient>
         </defs>
         
@@ -56,7 +56,7 @@ export const PortfolioChart: React.FC = () => {
             .map((d, i) => `L ${(i / (data.length - 1)) * 100} ${100 - ((d.value - minValue) / (maxValue - minValue)) * 100}`)
             .join(' ')}`}
           fill="none"
-          stroke="#3B82F6"
+          stroke="#0D9488"
           strokeWidth="2"
         />
         
@@ -67,7 +67,7 @@ export const PortfolioChart: React.FC = () => {
             cx={`${(i / (data.length - 1)) * 100}%`}
             cy={`${100 - ((d.value - minValue) / (maxValue - minValue)) * 100}%`}
             r="3"
-            fill="#3B82F6"
+            fill="#0D9488"
             className="hover:r-4 transition-all cursor-pointer"
           />
         ))}

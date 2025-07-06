@@ -10,11 +10,11 @@ export const Header: React.FC = () => {
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-3">
-            <div className="h-10 w-10 bg-blue-600 rounded-lg flex items-center justify-center">
+            <div className="h-10 w-10 bg-gradient-to-r from-teal-600 to-teal-500 rounded-lg flex items-center justify-center">
               <Shield className="h-6 w-6 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-900">Disruptech Ventures</h1>
+              <h1 className="text-xl font-bold text-slate-800">Disruptech Ventures</h1>
               <p className="text-sm text-gray-500">Investor Dashboard</p>
             </div>
           </div>
@@ -26,13 +26,13 @@ export const Header: React.FC = () => {
             <input
               type="text"
               placeholder="Search funds, companies..."
-              className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent w-64"
+              className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent w-64"
             />
           </div>
 
           <button className="relative p-2 text-gray-400 hover:text-gray-600 transition-colors">
             <Bell className="h-5 w-5" />
-            <span className="absolute -top-1 -right-1 h-3 w-3 bg-red-500 rounded-full"></span>
+            <span className="absolute -top-1 -right-1 h-3 w-3 bg-teal-500 rounded-full"></span>
           </button>
 
           <div className="flex items-center space-x-3">

@@ -16,7 +16,7 @@ export const InvestorDashboard: React.FC = () => {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Portfolio Overview</h1>
+          <h1 className="text-2xl font-bold text-slate-800">Portfolio Overview</h1>
           <p className="text-gray-600">Welcome back! Here's your investment summary.</p>
         </div>
         <div className="flex items-center space-x-2 text-sm text-gray-500">
@@ -58,8 +58,8 @@ export const InvestorDashboard: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           <div className="flex items-center justify-between mb-6">
-            <h3 className="text-lg font-semibold text-gray-900">Portfolio Performance</h3>
-            <select className="text-sm border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <h3 className="text-lg font-semibold text-slate-800">Portfolio Performance</h3>
+            <select className="text-sm border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent">
               <option>Last 12 months</option>
               <option>Last 6 months</option>
               <option>Last 3 months</option>
@@ -69,25 +69,25 @@ export const InvestorDashboard: React.FC = () => {
         </div>
 
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-6">Fund Allocation</h3>
+          <h3 className="text-lg font-semibold text-slate-800 mb-6">Fund Allocation</h3>
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
-                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-teal-500 rounded-full"></div>
                 <span className="text-sm font-medium text-gray-700">Fund I</span>
               </div>
               <div className="text-right">
-                <p className="text-sm font-medium text-gray-900">$1.2M</p>
+                <p className="text-sm font-medium text-slate-800">$1.2M</p>
                 <p className="text-xs text-gray-500">48%</p>
               </div>
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-slate-500 rounded-full"></div>
                 <span className="text-sm font-medium text-gray-700">Fund II</span>
               </div>
               <div className="text-right">
-                <p className="text-sm font-medium text-gray-900">$800K</p>
+                <p className="text-sm font-medium text-slate-800">$800K</p>
                 <p className="text-xs text-gray-500">32%</p>
               </div>
             </div>
@@ -97,7 +97,7 @@ export const InvestorDashboard: React.FC = () => {
                 <span className="text-sm font-medium text-gray-700">Fund III</span>
               </div>
               <div className="text-right">
-                <p className="text-sm font-medium text-gray-900">$500K</p>
+                <p className="text-sm font-medium text-slate-800">$500K</p>
                 <p className="text-xs text-gray-500">20%</p>
               </div>
             </div>
@@ -110,20 +110,20 @@ export const InvestorDashboard: React.FC = () => {
           <RecentActivity />
         </div>
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-6">Top Performing Companies</h3>
+          <h3 className="text-lg font-semibold text-slate-800 mb-6">Top Performing Companies</h3>
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-r from-teal-500 to-teal-400 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-sm">TC</span>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-900">TechCorp</p>
+                  <p className="text-sm font-medium text-slate-800">TechCorp</p>
                   <p className="text-xs text-gray-500">SaaS Platform</p>
                 </div>
               </div>
               <div className="text-right">
-                <div className="flex items-center space-x-1 text-green-600">
+                <div className="flex items-center space-x-1 text-teal-600">
                   <ArrowUpRight className="h-4 w-4" />
                   <span className="text-sm font-medium">+24.5%</span>
                 </div>
@@ -131,16 +131,16 @@ export const InvestorDashboard: React.FC = () => {
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-r from-slate-600 to-slate-500 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-sm">AI</span>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-900">AI Solutions</p>
+                  <p className="text-sm font-medium text-slate-800">AI Solutions</p>
                   <p className="text-xs text-gray-500">AI/ML Platform</p>
                 </div>
               </div>
               <div className="text-right">
-                <div className="flex items-center space-x-1 text-green-600">
+                <div className="flex items-center space-x-1 text-teal-600">
                   <ArrowUpRight className="h-4 w-4" />
                   <span className="text-sm font-medium">+18.2%</span>
                 </div>
@@ -152,7 +152,7 @@ export const InvestorDashboard: React.FC = () => {
                   <span className="text-white font-bold text-sm">FT</span>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-900">FinTech Pro</p>
+                  <p className="text-sm font-medium text-slate-800">FinTech Pro</p>
                   <p className="text-xs text-gray-500">Financial Services</p>
                 </div>
               </div>

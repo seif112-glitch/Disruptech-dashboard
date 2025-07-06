@@ -15,14 +15,14 @@ export const AIFeaturesView: React.FC = () => {
       name: 'Exit Opportunity Radar',
       icon: Target,
       description: 'AI-powered exit timing and acquirer matching',
-      color: 'purple'
+      color: 'teal'
     },
     {
       id: 'ask-docs',
       name: 'Ask the Docs Assistant',
       icon: MessageCircle,
       description: 'Conversational AI for document queries',
-      color: 'blue'
+      color: 'slate'
     },
     {
       id: 'forecasting',
@@ -49,13 +49,13 @@ export const AIFeaturesView: React.FC = () => {
 
   const getColorClasses = (color: string, active: boolean) => {
     const colors = {
-      purple: active ? 'bg-purple-600 text-white' : 'text-purple-600 hover:bg-purple-50',
-      blue: active ? 'bg-blue-600 text-white' : 'text-blue-600 hover:bg-blue-50',
+      teal: active ? 'bg-teal-600 text-white' : 'text-teal-600 hover:bg-teal-50',
+      slate: active ? 'bg-slate-600 text-white' : 'text-slate-600 hover:bg-slate-50',
       green: active ? 'bg-green-600 text-white' : 'text-green-600 hover:bg-green-50',
       red: active ? 'bg-red-600 text-white' : 'text-red-600 hover:bg-red-50',
       orange: active ? 'bg-orange-600 text-white' : 'text-orange-600 hover:bg-orange-50'
     };
-    return colors[color as keyof typeof colors] || colors.blue;
+    return colors[color as keyof typeof colors] || colors.slate;
   };
 
   const renderActiveFeature = () => {
@@ -79,15 +79,15 @@ export const AIFeaturesView: React.FC = () => {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          <div className="p-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg">
+          <div className="p-2 bg-gradient-to-r from-teal-500 to-slate-600 rounded-lg">
             <Sparkles className="h-6 w-6 text-white" />
           </div>
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">AI-Powered Features</h1>
+            <h1 className="text-2xl font-bold text-slate-800">AI-Powered Features</h1>
             <p className="text-gray-600">Advanced artificial intelligence tools for investment management</p>
           </div>
         </div>
-        <div className="flex items-center space-x-2 text-sm text-purple-600 bg-purple-50 px-3 py-2 rounded-lg">
+        <div className="flex items-center space-x-2 text-sm text-teal-600 bg-teal-50 px-3 py-2 rounded-lg">
           <Sparkles className="h-4 w-4" />
           <span>Demo Environment</span>
         </div>
@@ -95,7 +95,7 @@ export const AIFeaturesView: React.FC = () => {
 
       {/* Feature Navigation */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Select AI Feature</h3>
+        <h3 className="text-lg font-semibold text-slate-800 mb-4">Select AI Feature</h3>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
           {features.map((feature) => {
             const Icon = feature.icon;
@@ -131,18 +131,18 @@ export const AIFeaturesView: React.FC = () => {
       </div>
 
       {/* Demo Notice */}
-      <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl p-6 border border-purple-200">
+      <div className="bg-gradient-to-r from-teal-50 to-slate-50 rounded-xl p-6 border border-teal-200">
         <div className="flex items-start space-x-3">
-          <Sparkles className="h-6 w-6 text-purple-600 mt-1" />
+          <Sparkles className="h-6 w-6 text-teal-600 mt-1" />
           <div>
-            <h3 className="font-medium text-purple-900 mb-2">AI Features Demo</h3>
-            <p className="text-sm text-purple-800">
+            <h3 className="font-medium text-slate-800 mb-2">AI Features Demo</h3>
+            <p className="text-sm text-slate-700">
               These advanced AI features represent the future vision of the Disruptech Ventures platform. 
               All data shown is simulated for demonstration purposes. The actual implementation would 
               integrate with real-time data sources, machine learning models, and external APIs to provide 
               genuine insights and automation capabilities.
             </p>
-            <div className="mt-3 text-xs text-purple-700">
+            <div className="mt-3 text-xs text-slate-600">
               Features include: Machine Learning Models • Natural Language Processing • Predictive Analytics • Real-time Monitoring • Automated Report Generation
             </div>
           </div>
