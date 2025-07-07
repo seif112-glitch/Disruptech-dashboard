@@ -50,7 +50,12 @@ export const Header: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-12">
+            <div className="inline-flex items-center space-x-2 bg-teal-600/20 backdrop-blur-sm border border-teal-400/30 rounded-full px-6 py-2">
+              <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse"></div>
+              <span className="text-teal-200 font-medium">Now Fundraising</span>
+            </div>
+            
             {[
               { label: 'Overview', id: 'overview' },
               { label: 'Team', id: 'team' },
@@ -97,6 +102,13 @@ export const Header: React.FC = () => {
         {isMenuOpen && (
           <div className="lg:hidden bg-white border-t border-gray-100 shadow-lg">
             <nav className="py-4 space-y-2">
+              <div className="px-4 py-2">
+                <div className="inline-flex items-center space-x-2 bg-teal-100 text-teal-800 px-4 py-2 rounded-full">
+                  <div className="w-2 h-2 bg-teal-600 rounded-full animate-pulse"></div>
+                  <span className="font-medium text-sm">Now Fundraising</span>
+                </div>
+              </div>
+              
               {[
                 { label: 'Overview', id: 'overview' },
                 { label: 'Team', id: 'team' },
