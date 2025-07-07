@@ -42,30 +42,28 @@ function App() {
     );
   }
 
-  // If not authenticated, show the marketing website with login overlay
+  // If not authenticated, show the marketing website with login at the bottom
   if (!isAuthenticated) {
     return (
-      <>
-        <div className="min-h-screen bg-white">
-          <Header />
-          <main>
-            <Hero />
-            <FundOverview />
-            <AIInsights />
-            <AIPreview />
-            <AIMarketInsights />
-            <SmartSearch />
-            <Team />
-            <Portfolio />
-            <SecurityCompliance />
-            <ContactForm />
-          </main>
-          <Footer />
-          <EnhancedAIAssistant />
-        </div>
-        {/* Login form as overlay */}
+      <div className="min-h-screen bg-white">
+        <Header />
+        <main>
+          <Hero />
+          <FundOverview />
+          <AIInsights />
+          <AIPreview />
+          <AIMarketInsights />
+          <SmartSearch />
+          <Team />
+          <Portfolio />
+          <SecurityCompliance />
+          <ContactForm />
+        </main>
+        <Footer />
+        <EnhancedAIAssistant />
+        {/* Login form at the bottom */}
         <LoginForm />
-      </>
+      </div>
     );
   }
 
