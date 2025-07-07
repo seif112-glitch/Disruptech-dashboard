@@ -42,6 +42,7 @@ function App() {
     );
   }
 
+  // If not authenticated, show the marketing website with login overlay
   if (!isAuthenticated) {
     return (
       <>
@@ -62,11 +63,13 @@ function App() {
           <Footer />
           <EnhancedAIAssistant />
         </div>
+        {/* Login form as overlay */}
         <LoginForm />
       </>
     );
   }
 
+  // If authenticated, show the dashboard
   const renderActiveView = () => {
     switch (activeTab) {
       case 'dashboard':
