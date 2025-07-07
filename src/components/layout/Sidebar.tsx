@@ -14,7 +14,9 @@ import {
   Calendar,
   Zap,
   Mail,
-  CheckCircle
+  CheckCircle,
+  LogOut,
+  ArrowLeft
 } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 
@@ -24,7 +26,7 @@ interface SidebarProps {
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
 
   const investorNavigation = [
     { id: 'dashboard', label: 'Dashboard', icon: Home },
@@ -52,6 +54,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
   ];
 
   const navigation = user?.role === 'admin' ? adminNavigation : investorNavigation;
+
+  const handleBackToSite = () => {
+    logout();
+  };
 
   return (
     <div className="w-64 bg-slate-800 text-white flex flex-col h-screen fixed left-0 top-0 z-30">
@@ -97,7 +103,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
         </div>
       </nav>
 
-      <div className="p-4 border-t border-slate-700">
+      <div className="p-4 border-t border-slate-700 space-y-4">
         <div className="flex items-center space-x-3">
           <div className="h-10 w-10 bg-gradient-to-r from-teal-600 to-teal-500 rounded-lg flex items-center justify-center">
             <TrendingUp className="h-5 w-5 text-white" />
@@ -107,6 +113,14 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
             <p className="text-xs text-slate-400">+12.4% this quarter</p>
           </div>
         </div>
+        
+        <button
+          onClick={handleBackToSite}
+          className="w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-slate-300 hover:bg-slate-700 hover:text-white transition-all duration-200"
+        >
+          <ArrowLeft className="h-5 w-5" />
+          <span className="font-medium">Back to Main Site</span>
+        </button>
       </div>
     </div>
   );

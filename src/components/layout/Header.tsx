@@ -1,9 +1,14 @@
 import React from 'react';
-import { Bell, Search, User, LogOut, Settings, Shield } from 'lucide-react';
+import { Bell, Search, User, LogOut, Settings, Shield, Home } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 
 export const Header: React.FC = () => {
   const { user, logout } = useAuth();
+
+  const handleBackToSite = () => {
+    // First logout, then the user will see the marketing site
+    logout();
+  };
 
   return (
     <header className="bg-white border-b border-gray-200 px-6 py-4">
@@ -57,6 +62,13 @@ export const Header: React.FC = () => {
                   <button className="w-full flex items-center space-x-2 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
                     <Settings className="h-4 w-4" />
                     <span>Settings</span>
+                  </button>
+                  <button
+                    onClick={handleBackToSite}
+                    className="w-full flex items-center space-x-2 px-3 py-2 text-sm text-blue-600 hover:bg-blue-50 rounded-lg"
+                  >
+                    <Home className="h-4 w-4" />
+                    <span>Back to Main Site</span>
                   </button>
                   <hr className="my-2" />
                   <button

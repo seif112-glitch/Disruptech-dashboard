@@ -1,12 +1,12 @@
 import React from 'react';
-import { Shield, User, Settings } from 'lucide-react';
+import { Shield, User, Settings, X } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 
 export const LoginForm: React.FC = () => {
   const { loginAsAdmin, loginAsInvestor } = useAuth();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center px-4 z-50">
       <div className="max-w-md w-full space-y-8">
         <div className="text-center">
           <div className="mx-auto h-16 w-16 bg-gradient-to-r from-teal-500 to-teal-400 rounded-full flex items-center justify-center mb-6">
@@ -16,7 +16,7 @@ export const LoginForm: React.FC = () => {
           <p className="mt-2 text-teal-200">Investor Dashboard</p>
         </div>
         
-        <div className="bg-white rounded-xl shadow-2xl p-8 space-y-6">
+        <div className="bg-white rounded-xl shadow-2xl p-8 space-y-6 relative">
           <div className="text-center">
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Choose Your Role</h3>
             <p className="text-gray-600 text-sm">Select your dashboard type to continue</p>
